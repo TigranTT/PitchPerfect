@@ -36,7 +36,6 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
    
         
     //Per project review creating refactoring method.
-    
     func setUIState(recButton:Bool, stopButton:Bool) {
         recordButton.isEnabled = recButton
         stopRecordingButton.isEnabled = stopButton
