@@ -32,18 +32,8 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        stopRecordingButton.isEnabled = false
-        recordLabel.text = "Tap to Record"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("view will appear")
-    }
+        
+   
         
     //Per project review creating refactoring method.
     
@@ -55,6 +45,17 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         } else {
             recordLabel.text = "Recording..."
         }
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUIState(recButton: true, stopButton: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
     }
 
     @IBAction func recordAudio(_ sender: Any) {
