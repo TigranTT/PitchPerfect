@@ -39,11 +39,13 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     func setUIState(recButton:Bool, stopButton:Bool) {
         recordButton.isEnabled = recButton
         stopRecordingButton.isEnabled = stopButton
-        if recButton {
+      /*  if recButton {
             recordLabel.text = "Tap to Record"
         } else {
             recordLabel.text = "Recording..."
-        }
+        } */
+        //instead of above commented code using ternary operator
+        recordLabel.text = recButton ? "Tap to Record" : "Recording..."
     }
     
     
