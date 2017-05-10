@@ -25,6 +25,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         static let AudioRecordingError = "Audio Recording Error"
         static let AudioFileError = "Audio File Error"
         static let AudioEngineError = "Audio Engine Error"
+    }
     
     //recording addition
     var audioRecorder: AVAudioRecorder!
@@ -32,9 +33,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
-        
-   
-        
+    
     //Per project review creating refactoring method.
     func setUIState(recButton:Bool, stopButton:Bool) {
         recordButton.isEnabled = recButton
@@ -47,7 +46,6 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         //instead of above commented code using ternary operator
         recordLabel.text = recButton ? "Tap to Record" : "Recording..."
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
